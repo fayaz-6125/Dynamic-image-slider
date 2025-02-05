@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide active" data-caption="Pyramids - Egypt">
+                <img src="https://www.tripsavvy.com/thmb/p-X8mMAv-vqWct7oosovltQoKZg=/2121x1414/filters:fill(auto,1)/giza-egypt-pyramids-in-sunset-scene--wonders-of-the-world--1085205362-e1d04d7e00e94c4896ca58bed32e5a61.jpg" alt="Pyramids">
+            </div>
+            <div class="slide" data-caption="Statue of liberty - New york">
+                <img src="https://th.bing.com/th/id/OIP.Bc0wWJlMXroPmOq14VJcUQHaE8?rs=1&pid=ImgDetMain" alt="Statue of liberty">
+            </div>
+            <div class="slide" data-caption="Taj Mahal - India">
+                <img src="https://www.thoughtco.com/thmb/1g2-jnNGFo6SMikINMmHOmKsBMI=/3865x2576/filters:fill(auto,1)/sunrise-at-taj-mahal--agra--uttar-pradash--india-583682538-5b91840bc9e77c0050bdc67b.jpg" alt="Taj Mahal">
+            </div>
+            <div class="slide" data-caption="Great Wall - china">
+                <img src="https://th.bing.com/th/id/OIP.XIP8n-FUuutxiV7G3s33xAHaEK?rs=1&pid=ImgDetMain" alt="Great wall">
+            </div>
+        </div>
+
+        <!-- Caption -->
+        <div class="caption"></div>
+
+        <!-- Navigation Buttons -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+
+        <!-- Thumbnail Navigation -->
+        <div class="thumbnails">
+            <img src="https://www.tripsavvy.com/thmb/p-X8mMAv-vqWct7oosovltQoKZg=/2121x1414/filters:fill(auto,1)/giza-egypt-pyramids-in-sunset-scene--wonders-of-the-world--1085205362-e1d04d7e00e94c4896ca58bed32e5a61.jpg" class="thumb active" onclick="goToSlide(0)">
+            <img src="https://th.bing.com/th/id/OIP.Bc0wWJlMXroPmOq14VJcUQHaE8?rs=1&pid=ImgDetMain" class="thumb" onclick="goToSlide(1)">
+            <img src="https://www.thoughtco.com/thmb/1g2-jnNGFo6SMikINMmHOmKsBMI=/3865x2576/filters:fill(auto,1)/sunrise-at-taj-mahal--agra--uttar-pradash--india-583682538-5b91840bc9e77c0050bdc67b.jpg" class="thumb" onclick="goToSlide(2)">
+            <img src="https://th.bing.com/th/id/OIP.XIP8n-FUuutxiV7G3s33xAHaEK?rs=1&pid=ImgDetMain" class="thumb" onclick="goToSlide(3)">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

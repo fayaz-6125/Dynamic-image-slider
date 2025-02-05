@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.slider-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px; /* Increased max-width for larger display */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Fixed height for larger display */
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out; /* Fade effect */
+    opacity: 0;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill the container without distortion */
+    border-radius: 10px 10px 0 0;
+}
+
+/* Caption */
+.caption {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px; /* Larger buttons for better usability */
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Thumbnails */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background: #fff;
+}
+
+.thumb {
+    width: 80px;  /* Increased thumbnail size */
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+    border-radius: 5px;
+}
+
+.thumb.active {
+    border: 2px solid #007BFF;
+}
+
+@media (max-width: 600px) {
+    .slider {
+        height: 300px; /* Adjust height for mobile screens */
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .thumb {
+        width: 60px;
+        height: 45px;
+    }
+}
